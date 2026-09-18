@@ -1,0 +1,15 @@
+pydicom
+opencv-python
+scikit-image
+scikit-learn
+pandas
+matplotlib
+seaborn
+pylibjpeg
+pylibjpeg-libjpeg
+pylibjpeg-openjpeg
+python-gdcm
+jupyter
+notebook
+ipykernel
+numpy
