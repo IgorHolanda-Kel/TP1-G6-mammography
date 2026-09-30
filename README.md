@@ -5,6 +5,7 @@
 **Grupo:** G6 — Marcos Felipe Arruda Lima, Adrian Lucas Pinheiro Silva, Igor Holanda Costa
 **Desafio:** RSNA Screening Mammography Breast Cancer Detection (2023)
 **Competição no Kaggle:** https://www.kaggle.com/competitions/rsna-breast-cancer-detection
+**Link do repositorio github:** https://github.com/IgorHolanda-Kel/TP1-G6-mammography
 
 ## Sobre o projeto:
 
@@ -50,6 +51,7 @@ instalados (já incluídos no `requirements.txt`).
 
 ## Como rodar o notebook do início ao fim
 
+### Passo 1: Fundação e Geração dos Folds (Semanas 1 e 2)
 1. Abra `notebooks/TP1_G6_mammography_baseline.ipynb` no Kaggle (ou em um
    ambiente Jupyter local com os dados baixados).
 2. Ajuste, se necessário, a variável `DATA_DIR` na célula de configuração:
@@ -66,6 +68,13 @@ instalados (já incluídos no `requirements.txt`).
      reportadas.
 5. Os arquivos gerados (ex.: `train_with_folds.csv`) ficam salvos em
    `OUTPUT_DIR`.
+
+### Passo 2: Extração de Características e Modelagem (Semana 3)
+1. Abra o notebook `gp6-screening-mammography-semana-3.ipynb`.
+2. **Dependência Crítica:** Ajuste a variável `FOLDS_CSV_PATH` no topo do código para apontar exatamente para o ficheiro `train_with_folds.csv` que acabou de gerar no Passo 1.
+3. **Aviso de Execução (Timeout):** Devido ao limite de 12 horas de processamento contínuo no Kaggle, a variável de subamostragem `NEG_PER_POS` foi fixada em `2`. Recomendo manter a mesma para garantir a extração de radiomica e auxiliar na finalização dos modelos.
+4. Ajuste o `DATA_DIR` e execute todas as células (`Run All`). 
+5. O notebook irá extrair os descritores (GLCM, HOG, Radiomics), correr a grelha de modelos (GridSearch), fazer o estudo de ablação de pré-processamento e gerar os CSVs e gráficos finais de métricas (`results_week3.csv` e as matrizes de confusão).
 
 ## Reprodutibilidade
 
