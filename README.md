@@ -34,7 +34,8 @@ completa dos dados brutos — os mesmos não estão versionados neste repositór
 
 .
 ├── notebooks/
-│   └── TP1_G6_mammography_baseline.ipynb
+│   ├── gp6-screening-mammography-breast-cancer(Semana 1-2).ipynb
+│   └── gp6-screening-mammography-semana-3.ipynb
 ├── requirements.txt
 └── README.md
 
